@@ -24,7 +24,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bFG-DP-dH5">
                                 <rect key="frame" x="180" y="236" width="240" height="128"/>
                                 <connections>
-                                    <segue destination="Wic-41-vQX" kind="embed" id="uB6-ei-eFe"/>
+                                    <segue destination="Wic-41-vQX" kind="embed" identifier="WeatherDetail" id="uB6-ei-eFe"/>
                                 </connections>
                             </containerView>
                         </subviews>

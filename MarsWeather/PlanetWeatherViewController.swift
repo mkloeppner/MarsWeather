@@ -22,6 +22,22 @@ class PlanetWeatherViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let identifier = segue.identifier else {
+            return;
+        }
+        
+        switch identifier {
+        case "TemperatureDetails":
+            guard let sender = sender as? TemperatureViewController else {
+                break;
+            }
+            sender.temperature = self.planetWeather.temperature
+            
+        default: break
+            
+        }
+    }
 
 }
 
