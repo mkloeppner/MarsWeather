@@ -9,8 +9,21 @@
 import UIKit
 
 class PlanetWeatherViewController: UIViewController {
+    
+    var planetWeather : PlanetWeather! {
+        didSet {
+            self.updateChildViewController()
+        }
+    }
+    
+    var selectedDetailViewController : UIViewController! {
+        didSet {
+            self.updateChildViewController()
+        }
+    }
+    
+    var planetWeatherFetcher : PlanetWeatherFetcher!
 
-    var planetWeather : PlanetWeather!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,23 +34,27 @@ class PlanetWeatherViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.planetWeatherFetcher.fetch(
+            { planetWeather in self.planetWeather = planetWeather }
+            , error: { error in })
+        
+    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard let identifier = segue.identifier else {
-            return;
-        }
-        
-        switch identifier {
-        case "TemperatureDetails":
-            guard let sender = sender as? TemperatureViewController else {
-                break;
-            }
-            sender.temperature = self.planetWeather.temperature
+        self.selectedDetailViewController = segue.destinationViewController
+    }
+    
+    func updateChildViewController() {
+        switch selectedDetailViewController {
+        case let selectedDetailViewController as TemperatureViewController:
+            selectedDetailViewController.temperature = self.planetWeather.temperature
             
         default: break
-            
         }
     }
 
 }
+
 

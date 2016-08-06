@@ -23,6 +23,8 @@
 		B5D9835E1D55D5F100D7BA69 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9835D1D55D5F100D7BA69 /* Temperature.swift */; };
 		B5D983621D55D6A200D7BA69 /* MockTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983611D55D6A200D7BA69 /* MockTemperature.swift */; };
 		B5D983641D55D6AE00D7BA69 /* MockPlanetWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983631D55D6AE00D7BA69 /* MockPlanetWeather.swift */; };
+		B5D983671D55DB3B00D7BA69 /* PlanetWeatherFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983661D55DB3B00D7BA69 /* PlanetWeatherFetcher.swift */; };
+		B5D9836B1D55DC6800D7BA69 /* MockPlanetWeatherFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9836A1D55DC6800D7BA69 /* MockPlanetWeatherFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		B5D9835D1D55D5F100D7BA69 /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		B5D983611D55D6A200D7BA69 /* MockTemperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTemperature.swift; sourceTree = "<group>"; };
 		B5D983631D55D6AE00D7BA69 /* MockPlanetWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPlanetWeather.swift; sourceTree = "<group>"; };
+		B5D983661D55DB3B00D7BA69 /* PlanetWeatherFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetWeatherFetcher.swift; sourceTree = "<group>"; };
+		B5D9836A1D55DC6800D7BA69 /* MockPlanetWeatherFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPlanetWeatherFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 				B5D983531D55D20C00D7BA69 /* PlanetWeather */,
 				B5D983551D55D3FA00D7BA69 /* Temperature */,
 				B5D9835F1D55D68800D7BA69 /* Mock */,
+				B5D983681D55DC2500D7BA69 /* Common */,
 				B5D983241D55CF1500D7BA69 /* Assets.xcassets */,
 				B5D983261D55CF1500D7BA69 /* LaunchScreen.storyboard */,
 				B5D983291D55CF1500D7BA69 /* Info.plist */,
@@ -172,6 +177,7 @@
 		B5D983531D55D20C00D7BA69 /* PlanetWeather */ = {
 			isa = PBXGroup;
 			children = (
+				B5D983651D55DB1300D7BA69 /* Services */,
 				B5D983541D55D21900D7BA69 /* Controller */,
 				B5D983581D55D54000D7BA69 /* ModelTypes */,
 			);
@@ -222,6 +228,7 @@
 		B5D9835F1D55D68800D7BA69 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				B5D983691D55DC5000D7BA69 /* Services */,
 				B5D983601D55D69100D7BA69 /* ModelTypes */,
 			);
 			name = Mock;
@@ -234,6 +241,29 @@
 				B5D983631D55D6AE00D7BA69 /* MockPlanetWeather.swift */,
 			);
 			name = ModelTypes;
+			sourceTree = "<group>";
+		};
+		B5D983651D55DB1300D7BA69 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B5D983661D55DB3B00D7BA69 /* PlanetWeatherFetcher.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		B5D983681D55DC2500D7BA69 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		B5D983691D55DC5000D7BA69 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B5D9836A1D55DC6800D7BA69 /* MockPlanetWeatherFetcher.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,9 +401,11 @@
 			files = (
 				B5D983201D55CF1500D7BA69 /* PlanetWeatherViewController.swift in Sources */,
 				B5D9831E1D55CF1500D7BA69 /* AppDelegate.swift in Sources */,
+				B5D983671D55DB3B00D7BA69 /* PlanetWeatherFetcher.swift in Sources */,
 				B5D983641D55D6AE00D7BA69 /* MockPlanetWeather.swift in Sources */,
 				B5D9835A1D55D55C00D7BA69 /* PlanetWeather.swift in Sources */,
 				B5D9835E1D55D5F100D7BA69 /* Temperature.swift in Sources */,
+				B5D9836B1D55DC6800D7BA69 /* MockPlanetWeatherFetcher.swift in Sources */,
 				B5D983621D55D6A200D7BA69 /* MockTemperature.swift in Sources */,
 				B5D983571D55D41500D7BA69 /* TemperatureViewController.swift in Sources */,
 			);

@@ -18,9 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let container = Container()
         container.registerForStoryboard(PlanetWeatherViewController.self) { r, c in
             c.planetWeather = r.resolve(PlanetWeather.self);
+            c.planetWeatherFetcher = r.resolve(PlanetWeatherFetcher.self)
         }
         
         container.register(PlanetWeather.self) { _ in MockPlanetWeather(temperature: MockTemperature(minimumTemperature: 1.0, maximumTemperature: 2.0)) }
+        container.register(PlanetWeatherFetcher.self, factory: { _ in
+            MockPlanetModelFetcher(planetWeather:
+                MockPlanetWeather(temperature:
+                    MockTemperature(minimumTemperature: 5.0, maximumTemperature: 10.0))) })
         
         return container
     }()
