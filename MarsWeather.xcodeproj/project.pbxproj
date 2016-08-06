@@ -19,6 +19,10 @@
 		B5D9834F1D55D10B00D7BA69 /* Swinject.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5D9834B1D55D01600D7BA69 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5D983511D55D16B00D7BA69 /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5D9834B1D55D01600D7BA69 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5D983571D55D41500D7BA69 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983561D55D41500D7BA69 /* TemperatureViewController.swift */; };
+		B5D9835A1D55D55C00D7BA69 /* PlanetWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983591D55D55C00D7BA69 /* PlanetWeather.swift */; };
+		B5D9835E1D55D5F100D7BA69 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9835D1D55D5F100D7BA69 /* Temperature.swift */; };
+		B5D983621D55D6A200D7BA69 /* MockTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983611D55D6A200D7BA69 /* MockTemperature.swift */; };
+		B5D983641D55D6AE00D7BA69 /* MockPlanetWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983631D55D6AE00D7BA69 /* MockPlanetWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		B5D9833F1D55CF1500D7BA69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5D9834B1D55D01600D7BA69 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = ../Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		B5D983561D55D41500D7BA69 /* TemperatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		B5D983591D55D55C00D7BA69 /* PlanetWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetWeather.swift; sourceTree = "<group>"; };
+		B5D9835D1D55D5F100D7BA69 /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		B5D983611D55D6A200D7BA69 /* MockTemperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTemperature.swift; sourceTree = "<group>"; };
+		B5D983631D55D6AE00D7BA69 /* MockPlanetWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPlanetWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,7 @@
 				B5D983211D55CF1500D7BA69 /* Main.storyboard */,
 				B5D983531D55D20C00D7BA69 /* PlanetWeather */,
 				B5D983551D55D3FA00D7BA69 /* Temperature */,
+				B5D9835F1D55D68800D7BA69 /* Mock */,
 				B5D983241D55CF1500D7BA69 /* Assets.xcassets */,
 				B5D983261D55CF1500D7BA69 /* LaunchScreen.storyboard */,
 				B5D983291D55CF1500D7BA69 /* Info.plist */,
@@ -164,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				B5D983541D55D21900D7BA69 /* Controller */,
+				B5D983581D55D54000D7BA69 /* ModelTypes */,
 			);
 			name = PlanetWeather;
 			sourceTree = "<group>";
@@ -179,9 +189,51 @@
 		B5D983551D55D3FA00D7BA69 /* Temperature */ = {
 			isa = PBXGroup;
 			children = (
-				B5D983561D55D41500D7BA69 /* TemperatureViewController.swift */,
+				B5D9835C1D55D5E300D7BA69 /* Controller */,
+				B5D9835B1D55D5D300D7BA69 /* ModelTypes */,
 			);
 			name = Temperature;
+			sourceTree = "<group>";
+		};
+		B5D983581D55D54000D7BA69 /* ModelTypes */ = {
+			isa = PBXGroup;
+			children = (
+				B5D983591D55D55C00D7BA69 /* PlanetWeather.swift */,
+			);
+			name = ModelTypes;
+			sourceTree = "<group>";
+		};
+		B5D9835B1D55D5D300D7BA69 /* ModelTypes */ = {
+			isa = PBXGroup;
+			children = (
+				B5D9835D1D55D5F100D7BA69 /* Temperature.swift */,
+			);
+			name = ModelTypes;
+			sourceTree = "<group>";
+		};
+		B5D9835C1D55D5E300D7BA69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5D983561D55D41500D7BA69 /* TemperatureViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B5D9835F1D55D68800D7BA69 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B5D983601D55D69100D7BA69 /* ModelTypes */,
+			);
+			name = Mock;
+			sourceTree = "<group>";
+		};
+		B5D983601D55D69100D7BA69 /* ModelTypes */ = {
+			isa = PBXGroup;
+			children = (
+				B5D983611D55D6A200D7BA69 /* MockTemperature.swift */,
+				B5D983631D55D6AE00D7BA69 /* MockPlanetWeather.swift */,
+			);
+			name = ModelTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +371,10 @@
 			files = (
 				B5D983201D55CF1500D7BA69 /* PlanetWeatherViewController.swift in Sources */,
 				B5D9831E1D55CF1500D7BA69 /* AppDelegate.swift in Sources */,
+				B5D983641D55D6AE00D7BA69 /* MockPlanetWeather.swift in Sources */,
+				B5D9835A1D55D55C00D7BA69 /* PlanetWeather.swift in Sources */,
+				B5D9835E1D55D5F100D7BA69 /* Temperature.swift in Sources */,
+				B5D983621D55D6A200D7BA69 /* MockTemperature.swift in Sources */,
 				B5D983571D55D41500D7BA69 /* TemperatureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
