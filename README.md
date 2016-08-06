@@ -13,7 +13,9 @@ To build the app the following requirements needs to match:
 
 1. Run
 
-```bash carthage update```
+```bash 
+carthage update
+```
 
 2. Open Xcode
 3. Run tests
