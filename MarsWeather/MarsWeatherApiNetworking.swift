@@ -10,6 +10,10 @@ import Foundation
 
 public protocol MarsWeatherApiNetworking {
     
-    func get(url: NSURL, params: Array);
+    /**
+     * @var url The service url 
+     * @query HTTP Query Parameters
+     */
+    func get(url: NSURL, query: Dictionary<String, String>, success: (Dictionary<String, AnyObject?>) -> Void);
     
 }

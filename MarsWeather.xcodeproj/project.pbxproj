@@ -162,6 +162,7 @@
 			children = (
 				B5D9831D1D55CF1500D7BA69 /* AppDelegate.swift */,
 				B5D983211D55CF1500D7BA69 /* Main.storyboard */,
+				B5D983841D55F04400D7BA69 /* NSURLSession */,
 				B5D983531D55D20C00D7BA69 /* PlanetWeather */,
 				B5D983551D55D3FA00D7BA69 /* Temperature */,
 				B5D9837B1D55EA5800D7BA69 /* MarsWeatherApi */,
@@ -324,6 +325,13 @@
 				B5D983821D55EF4300D7BA69 /* MarsWeatherApiNetworking.swift */,
 			);
 			name = MarsWeatherApi;
+			sourceTree = "<group>";
+		};
+		B5D983841D55F04400D7BA69 /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NSURLSession;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

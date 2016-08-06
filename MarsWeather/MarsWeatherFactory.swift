@@ -12,8 +12,8 @@ public class MarsWeatherFactory {
     
     var formattingService : FormattingService!;
     
-    public func create(dictionary: NSDictionary) -> MarsWeather? {
-        
+    public func create(dictionary: Dictionary<String, AnyObject?>) -> MarsWeather? {
+        // TODO: Implement parsing logic
         return nil
     }
     

@@ -13,8 +13,15 @@ public class MarsWeatherApi {
     let baseURLPath = "http://marsweather.ingenology.com"
     let resourceURI = "/v1/latest/"
     
-    public func fetchMarsWeather() {
-        
+    var networking : MarsWeatherApiNetworking!
+    var modelTypeFactory : MarsWeatherFactory!
+    
+    public func fetchMarsWeather(success: (MarsWeather) -> Void) {
+        self.networking.get(NSURL(fileURLWithPath: baseURLPath + resourceURI), query: ["format" : "json"], success: { values in
+            if let weather = self.modelTypeFactory.create(values) {
+                success(weather)
+            }
+        })
     }
     
 }
