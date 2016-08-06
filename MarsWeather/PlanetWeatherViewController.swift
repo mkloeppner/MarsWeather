@@ -10,6 +10,8 @@ import UIKit
 
 class PlanetWeatherViewController: UIViewController {
     
+    let toastDuration = 1;
+    
     var planetWeather : PlanetWeather? {
         didSet {
             self.updateChildViewController()
@@ -36,10 +38,11 @@ class PlanetWeatherViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.planetWeatherFetcher.fetch(
-            { planetWeather in self.planetWeather = planetWeather }
-            , error: { error in
-            // TODO:
+        self.planetWeatherFetcher.fetch({ (planetWeather) in
+            self.planetWeather = planetWeather
+            self.notify("Updated");
+            }, error: { _ in
+                self.notify("Failed fetching weather data.");
         })
         
     }
@@ -63,10 +66,26 @@ class PlanetWeatherViewController: UIViewController {
     func onReloadButtonPressed(sender: AnyObject) {
         self.planetWeatherFetcher.fetch({ (planetWeather) in
             self.planetWeather = planetWeather
+                self.notify("Updated");
             }, error: { _ in
-            // TODO:
+                self.notify("Failed fetching weather data.");
         })
     }
+    
+    func notify(message: String) {
+        let updatedDialog = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
+        self.presentViewController(updatedDialog, animated: true, completion: nil)
+    
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(UInt64(self.toastDuration) * NSEC_PER_SEC)), dispatch_get_main_queue(), {
+            updatedDialog.dismissViewControllerAnimated(true, completion: { 
+                
+            })
+            
+            })
+
+
+    }
+
 
 }
 
