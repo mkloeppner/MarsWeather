@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B5D9831E1D55CF1500D7BA69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9831D1D55CF1500D7BA69 /* AppDelegate.swift */; };
-		B5D983201D55CF1500D7BA69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9831F1D55CF1500D7BA69 /* ViewController.swift */; };
+		B5D983201D55CF1500D7BA69 /* PlanetWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9831F1D55CF1500D7BA69 /* PlanetWeatherViewController.swift */; };
 		B5D983231D55CF1500D7BA69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D983211D55CF1500D7BA69 /* Main.storyboard */; };
 		B5D983251D55CF1500D7BA69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D983241D55CF1500D7BA69 /* Assets.xcassets */; };
 		B5D983281D55CF1500D7BA69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D983261D55CF1500D7BA69 /* LaunchScreen.storyboard */; };
@@ -64,7 +64,7 @@
 /* Begin PBXFileReference section */
 		B5D9831A1D55CF1500D7BA69 /* MarsWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D9831D1D55CF1500D7BA69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5D9831F1D55CF1500D7BA69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5D9831F1D55CF1500D7BA69 /* PlanetWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetWeatherViewController.swift; sourceTree = "<group>"; };
 		B5D983221D55CF1500D7BA69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5D983241D55CF1500D7BA69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5D983271D55CF1500D7BA69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -129,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				B5D9831D1D55CF1500D7BA69 /* AppDelegate.swift */,
-				B5D9831F1D55CF1500D7BA69 /* ViewController.swift */,
 				B5D983211D55CF1500D7BA69 /* Main.storyboard */,
+				B5D983531D55D20C00D7BA69 /* PlanetWeather */,
 				B5D983241D55CF1500D7BA69 /* Assets.xcassets */,
 				B5D983261D55CF1500D7BA69 /* LaunchScreen.storyboard */,
 				B5D983291D55CF1500D7BA69 /* Info.plist */,
@@ -155,6 +155,22 @@
 				B5D9833F1D55CF1500D7BA69 /* Info.plist */,
 			);
 			path = MarsWeatherUITests;
+			sourceTree = "<group>";
+		};
+		B5D983531D55D20C00D7BA69 /* PlanetWeather */ = {
+			isa = PBXGroup;
+			children = (
+				B5D983541D55D21900D7BA69 /* Controller */,
+			);
+			name = PlanetWeather;
+			sourceTree = "<group>";
+		};
+		B5D983541D55D21900D7BA69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5D9831F1D55CF1500D7BA69 /* PlanetWeatherViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5D983201D55CF1500D7BA69 /* ViewController.swift in Sources */,
+				B5D983201D55CF1500D7BA69 /* PlanetWeatherViewController.swift in Sources */,
 				B5D9831E1D55CF1500D7BA69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
