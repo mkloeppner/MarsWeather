@@ -7,15 +7,32 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var container: Container = {
+        let container = Container()
+        container.registerForStoryboard(PlanetWeatherViewController.self) { r, c in
+
+        }
+        
+        return container
+    }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window.makeKeyAndVisible()
+        self.window = window
+        
+        let storyboard = SwinjectStoryboard.create(name: "Main", bundle: nil, container: container)
+        window.rootViewController = storyboard.instantiateInitialViewController()
+        
         return true
     }
 
