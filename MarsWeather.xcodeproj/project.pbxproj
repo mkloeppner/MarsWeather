@@ -25,6 +25,11 @@
 		B5D983641D55D6AE00D7BA69 /* MockPlanetWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983631D55D6AE00D7BA69 /* MockPlanetWeather.swift */; };
 		B5D983671D55DB3B00D7BA69 /* PlanetWeatherFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983661D55DB3B00D7BA69 /* PlanetWeatherFetcher.swift */; };
 		B5D9836B1D55DC6800D7BA69 /* MockPlanetWeatherFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9836A1D55DC6800D7BA69 /* MockPlanetWeatherFetcher.swift */; };
+		B5D9836E1D55E2B200D7BA69 /* FormattingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9836D1D55E2B200D7BA69 /* FormattingService.swift */; };
+		B5D983711D55E30C00D7BA69 /* NumberFormatterFormattingServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983701D55E30C00D7BA69 /* NumberFormatterFormattingServiceAdapter.swift */; };
+		B5D983751D55E5F700D7BA69 /* TemperatureControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983731D55E5E000D7BA69 /* TemperatureControllerTest.swift */; };
+		B5D983781D55E7C100D7BA69 /* MockUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983771D55E7C100D7BA69 /* MockUILabel.swift */; };
+		B5D9837A1D55E84B00D7BA69 /* MockFormattingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983791D55E84B00D7BA69 /* MockFormattingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +95,11 @@
 		B5D983631D55D6AE00D7BA69 /* MockPlanetWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPlanetWeather.swift; sourceTree = "<group>"; };
 		B5D983661D55DB3B00D7BA69 /* PlanetWeatherFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetWeatherFetcher.swift; sourceTree = "<group>"; };
 		B5D9836A1D55DC6800D7BA69 /* MockPlanetWeatherFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPlanetWeatherFetcher.swift; sourceTree = "<group>"; };
+		B5D9836D1D55E2B200D7BA69 /* FormattingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattingService.swift; sourceTree = "<group>"; };
+		B5D983701D55E30C00D7BA69 /* NumberFormatterFormattingServiceAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterFormattingServiceAdapter.swift; sourceTree = "<group>"; };
+		B5D983731D55E5E000D7BA69 /* TemperatureControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureControllerTest.swift; sourceTree = "<group>"; };
+		B5D983771D55E7C100D7BA69 /* MockUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUILabel.swift; sourceTree = "<group>"; };
+		B5D983791D55E84B00D7BA69 /* MockFormattingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFormattingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +169,9 @@
 		B5D983311D55CF1500D7BA69 /* MarsWeatherTests */ = {
 			isa = PBXGroup;
 			children = (
+				B5D983761D55E7B300D7BA69 /* Mocks */,
 				B5D983321D55CF1500D7BA69 /* MarsWeatherTests.swift */,
+				B5D983721D55E5CB00D7BA69 /* TemperatureVieControllerTests */,
 				B5D983341D55CF1500D7BA69 /* Info.plist */,
 			);
 			path = MarsWeatherTests;
@@ -254,6 +266,7 @@
 		B5D983681D55DC2500D7BA69 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B5D9836C1D55E29E00D7BA69 /* Services */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -264,6 +277,33 @@
 				B5D9836A1D55DC6800D7BA69 /* MockPlanetWeatherFetcher.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		B5D9836C1D55E29E00D7BA69 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B5D9836D1D55E2B200D7BA69 /* FormattingService.swift */,
+				B5D983701D55E30C00D7BA69 /* NumberFormatterFormattingServiceAdapter.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		B5D983721D55E5CB00D7BA69 /* TemperatureVieControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5D983731D55E5E000D7BA69 /* TemperatureControllerTest.swift */,
+			);
+			name = TemperatureVieControllerTests;
+			path = ../MarsWeatherUITests;
+			sourceTree = "<group>";
+		};
+		B5D983761D55E7B300D7BA69 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B5D983771D55E7C100D7BA69 /* MockUILabel.swift */,
+				B5D983791D55E84B00D7BA69 /* MockFormattingService.swift */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,7 +440,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5D983201D55CF1500D7BA69 /* PlanetWeatherViewController.swift in Sources */,
+				B5D983711D55E30C00D7BA69 /* NumberFormatterFormattingServiceAdapter.swift in Sources */,
 				B5D9831E1D55CF1500D7BA69 /* AppDelegate.swift in Sources */,
+				B5D9836E1D55E2B200D7BA69 /* FormattingService.swift in Sources */,
 				B5D983671D55DB3B00D7BA69 /* PlanetWeatherFetcher.swift in Sources */,
 				B5D983641D55D6AE00D7BA69 /* MockPlanetWeather.swift in Sources */,
 				B5D9835A1D55D55C00D7BA69 /* PlanetWeather.swift in Sources */,
@@ -415,7 +457,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D9837A1D55E84B00D7BA69 /* MockFormattingService.swift in Sources */,
+				B5D983751D55E5F700D7BA69 /* TemperatureControllerTest.swift in Sources */,
 				B5D983331D55CF1500D7BA69 /* MarsWeatherTests.swift in Sources */,
+				B5D983781D55E7C100D7BA69 /* MockUILabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

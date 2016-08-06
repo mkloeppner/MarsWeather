@@ -24,7 +24,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bFG-DP-dH5">
                                 <rect key="frame" x="180" y="236" width="240" height="128"/>
                                 <connections>
-                                    <segue destination="Wic-41-vQX" kind="embed" identifier="TemperatureDetails" id="uB6-ei-eFe"/>
+                                    <segue destination="Wic-41-vQX" kind="embed" identifier="" id="fRs-Fe-NfK"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -42,12 +42,23 @@
                     <view key="view" contentMode="scaleToFill" id="RlC-js-CFn">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tc-cf-XDC">
+                                <rect key="frame" x="20" y="20" width="200" height="88"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="temperatureLabel" destination="1Tc-cf-XDC" id="uTF-a5-HUU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bN-bz-yxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="911"/>
+            <point key="canvasLocation" x="127" y="810"/>
         </scene>
     </scenes>
 </document>

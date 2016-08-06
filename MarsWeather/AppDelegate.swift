@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             c.planetWeather = r.resolve(PlanetWeather.self);
             c.planetWeatherFetcher = r.resolve(PlanetWeatherFetcher.self)
         }
+        container.registerForStoryboard(TemperatureViewController.self) { r, c in
+            c.formattingService = r.resolve(FormattingService.self)
+        }
+        
+        container.register(FormattingService.self) { _ in NumberFormatterFormattingServiceAdapter() }
         
         container.register(PlanetWeather.self) { _ in MockPlanetWeather(temperature: MockTemperature(minimumTemperature: 1.0, maximumTemperature: 2.0)) }
         container.register(PlanetWeatherFetcher.self, factory: { _ in

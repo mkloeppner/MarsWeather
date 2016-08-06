@@ -12,7 +12,17 @@ import UIKit
 
 class TemperatureViewController: UIViewController {
     
-    var temperature : Temperature!
+    @IBOutlet var temperatureLabel : UILabel?
+    
+    var temperature : Temperature! {
+        didSet {
+            if let temperatureLabel = temperatureLabel {
+                temperatureLabel.text = self.formattingService.string(fromTemperature: self.temperature.minimumTemperature)
+            }
+        }
+    }
+    
+    var formattingService : FormattingService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
