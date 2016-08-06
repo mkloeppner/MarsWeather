@@ -38,7 +38,9 @@ class PlanetWeatherViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         self.planetWeatherFetcher.fetch(
             { planetWeather in self.planetWeather = planetWeather }
-            , error: { error in })
+            , error: { error in
+            // TODO:
+        })
         
     }
 
@@ -55,6 +57,15 @@ class PlanetWeatherViewController: UIViewController {
             
         default: break
         }
+    }
+    
+    @IBAction
+    func onReloadButtonPressed(sender: AnyObject) {
+        self.planetWeatherFetcher.fetch({ (planetWeather) in
+            self.planetWeather = planetWeather
+            }, error: { _ in
+            // TODO:
+        })
     }
 
 }

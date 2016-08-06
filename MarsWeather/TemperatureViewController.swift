@@ -12,12 +12,16 @@ import UIKit
 
 class TemperatureViewController: UIViewController {
     
-    @IBOutlet var temperatureLabel : UILabel?
+    @IBOutlet var minTemperatureLabel : UILabel?
+    @IBOutlet var maxTemperatureLabel : UILabel?
     
     var temperature : Temperature! {
         didSet {
-            if let temperatureLabel = temperatureLabel {
-                temperatureLabel.text = self.formattingService.string(fromTemperature: self.temperature.min)
+            if let minTemperatureLabel = minTemperatureLabel {
+                minTemperatureLabel.text = self.formattingService.string(fromTemperature: self.temperature.min)
+            }
+            if let maxTemperatureLabel = maxTemperatureLabel {
+                maxTemperatureLabel.text = self.formattingService.string(fromTemperature: self.temperature.max)
             }
         }
     }
@@ -26,7 +30,8 @@ class TemperatureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.layer.masksToBounds = true
+        self.view.layer.cornerRadius = 5.0
     }
     
     override func didReceiveMemoryWarning() {

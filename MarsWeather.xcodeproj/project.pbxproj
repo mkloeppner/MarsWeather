@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B598F9F71D55F5FD009841C3 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B598F9F61D55F5FD009841C3 /* NetworkingService.swift */; };
+		B598F9FE1D55FBFE009841C3 /* NetworkService+MarsWeatherApiNetworkServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B598F9FD1D55FBFE009841C3 /* NetworkService+MarsWeatherApiNetworkServiceAdapter.swift */; };
+		B598FA021D55FC60009841C3 /* PlanetWeatherFetcher+MarsWeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B598FA011D55FC60009841C3 /* PlanetWeatherFetcher+MarsWeatherApi.swift */; };
+		B598FA041D55FCD2009841C3 /* PlanetWeatherAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B598FA031D55FCD2009841C3 /* PlanetWeatherAdapter.swift */; };
 		B5D9831E1D55CF1500D7BA69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9831D1D55CF1500D7BA69 /* AppDelegate.swift */; };
 		B5D983201D55CF1500D7BA69 /* PlanetWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9831F1D55CF1500D7BA69 /* PlanetWeatherViewController.swift */; };
 		B5D983231D55CF1500D7BA69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D983211D55CF1500D7BA69 /* Main.storyboard */; };
@@ -78,6 +82,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B598F9F61D55F5FD009841C3 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		B598F9FD1D55FBFE009841C3 /* NetworkService+MarsWeatherApiNetworkServiceAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkService+MarsWeatherApiNetworkServiceAdapter.swift"; sourceTree = "<group>"; };
+		B598FA011D55FC60009841C3 /* PlanetWeatherFetcher+MarsWeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlanetWeatherFetcher+MarsWeatherApi.swift"; sourceTree = "<group>"; };
+		B598FA031D55FCD2009841C3 /* PlanetWeatherAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetWeatherAdapter.swift; sourceTree = "<group>"; };
 		B5D9831A1D55CF1500D7BA69 /* MarsWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D9831D1D55CF1500D7BA69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5D9831F1D55CF1500D7BA69 /* PlanetWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetWeatherViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +145,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B598F9F81D55FB4E009841C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5D9837C1D55EA8C00D7BA69 /* MarsWeatherApi.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B598F9F91D55FB65009841C3 /* ModelType */ = {
+			isa = PBXGroup;
+			children = (
+				B5D9837E1D55EB1700D7BA69 /* MarsWeather.swift */,
+			);
+			name = ModelType;
+			sourceTree = "<group>";
+		};
+		B598F9FB1D55FBC6009841C3 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				B598FA001D55FC4A009841C3 /* PlanetWeather */,
+				B598F9FC1D55FBCF009841C3 /* MarsWeatherApi */,
+			);
+			name = Adapter;
+			sourceTree = "<group>";
+		};
+		B598F9FC1D55FBCF009841C3 /* MarsWeatherApi */ = {
+			isa = PBXGroup;
+			children = (
+				B598F9FD1D55FBFE009841C3 /* NetworkService+MarsWeatherApiNetworkServiceAdapter.swift */,
+			);
+			name = MarsWeatherApi;
+			sourceTree = "<group>";
+		};
+		B598F9FF1D55FC1B009841C3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B5D983801D55ED7800D7BA69 /* MarsWeatherFactory.swift */,
+				B5D983821D55EF4300D7BA69 /* MarsWeatherApiNetworking.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		B598FA001D55FC4A009841C3 /* PlanetWeather */ = {
+			isa = PBXGroup;
+			children = (
+				B598FA011D55FC60009841C3 /* PlanetWeatherFetcher+MarsWeatherApi.swift */,
+				B598FA031D55FCD2009841C3 /* PlanetWeatherAdapter.swift */,
+			);
+			name = PlanetWeather;
+			sourceTree = "<group>";
+		};
 		B5D983111D55CF1500D7BA69 = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +221,7 @@
 			children = (
 				B5D9831D1D55CF1500D7BA69 /* AppDelegate.swift */,
 				B5D983211D55CF1500D7BA69 /* Main.storyboard */,
-				B5D983841D55F04400D7BA69 /* NSURLSession */,
+				B598F9FB1D55FBC6009841C3 /* Adapter */,
 				B5D983531D55D20C00D7BA69 /* PlanetWeather */,
 				B5D983551D55D3FA00D7BA69 /* Temperature */,
 				B5D9837B1D55EA5800D7BA69 /* MarsWeatherApi */,
@@ -294,6 +353,7 @@
 			children = (
 				B5D9836D1D55E2B200D7BA69 /* FormattingService.swift */,
 				B5D983701D55E30C00D7BA69 /* NumberFormatterFormattingServiceAdapter.swift */,
+				B598F9F61D55F5FD009841C3 /* NetworkingService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -319,19 +379,11 @@
 		B5D9837B1D55EA5800D7BA69 /* MarsWeatherApi */ = {
 			isa = PBXGroup;
 			children = (
-				B5D9837C1D55EA8C00D7BA69 /* MarsWeatherApi.swift */,
-				B5D9837E1D55EB1700D7BA69 /* MarsWeather.swift */,
-				B5D983801D55ED7800D7BA69 /* MarsWeatherFactory.swift */,
-				B5D983821D55EF4300D7BA69 /* MarsWeatherApiNetworking.swift */,
+				B598F9FF1D55FC1B009841C3 /* Services */,
+				B598F9F91D55FB65009841C3 /* ModelType */,
+				B598F9F81D55FB4E009841C3 /* Controller */,
 			);
 			name = MarsWeatherApi;
-			sourceTree = "<group>";
-		};
-		B5D983841D55F04400D7BA69 /* NSURLSession */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NSURLSession;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,12 +524,16 @@
 				B5D983711D55E30C00D7BA69 /* NumberFormatterFormattingServiceAdapter.swift in Sources */,
 				B5D9831E1D55CF1500D7BA69 /* AppDelegate.swift in Sources */,
 				B5D9836E1D55E2B200D7BA69 /* FormattingService.swift in Sources */,
+				B598F9FE1D55FBFE009841C3 /* NetworkService+MarsWeatherApiNetworkServiceAdapter.swift in Sources */,
 				B5D983671D55DB3B00D7BA69 /* PlanetWeatherFetcher.swift in Sources */,
 				B5D983641D55D6AE00D7BA69 /* MockPlanetWeather.swift in Sources */,
 				B5D9837F1D55EB1700D7BA69 /* MarsWeather.swift in Sources */,
 				B5D9835A1D55D55C00D7BA69 /* PlanetWeather.swift in Sources */,
 				B5D9835E1D55D5F100D7BA69 /* Temperature.swift in Sources */,
+				B598FA021D55FC60009841C3 /* PlanetWeatherFetcher+MarsWeatherApi.swift in Sources */,
 				B5D9837D1D55EA8C00D7BA69 /* MarsWeatherApi.swift in Sources */,
+				B598FA041D55FCD2009841C3 /* PlanetWeatherAdapter.swift in Sources */,
+				B598F9F71D55F5FD009841C3 /* NetworkingService.swift in Sources */,
 				B5D9836B1D55DC6800D7BA69 /* MockPlanetWeatherFetcher.swift in Sources */,
 				B5D983621D55D6A200D7BA69 /* MockTemperature.swift in Sources */,
 				B5D983811D55ED7800D7BA69 /* MarsWeatherFactory.swift in Sources */,
