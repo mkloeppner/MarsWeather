@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var container: Container = {
         let container = Container()
+        
         container.registerForStoryboard(PlanetWeatherViewController.self) { r, c in
             c.planetWeather = r.resolve(PlanetWeather.self);
             c.planetWeatherFetcher = r.resolve(PlanetWeatherFetcher.self)
@@ -24,13 +25,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             c.formattingService = r.resolve(FormattingService.self)
         }
         
-        container.register(FormattingService.self) { _ in NumberFormatterFormattingServiceAdapter() }
+        container.register(FormattingService.self) { _ in return NumberFormatterFormattingServiceAdapter() }
+        container.register(NetworkingService.self) { _ in return NetworkingService() }
         
-        container.register(PlanetWeather.self) { _ in MockPlanetWeather(temperature: MockTemperature(min: 1.0, max: 2.0)) }
-        container.register(PlanetWeatherFetcher.self, factory: { _ in
-            MockPlanetModelFetcher(planetWeather:
-                MockPlanetWeather(temperature:
-                    MockTemperature(min: 5.0, max: 10.0))) })
+        container.register(PlanetWeatherFetcher.self, factory: { r in
+            return r.resolve(MarsWeatherApi.self)! })
+        
+        container.register(MarsWeatherApi.self) { r in
+            var p = MarsWeatherApi()
+            p.networking = r.resolve(NetworkingService.self)
+            p.modelTypeFactory = r.resolve(MarsWeatherFactory.self)
+            return p
+            }
         
         container.register(MarsWeatherFactory.self) { r in
             var marsWeatherFactory = MarsWeatherFactory()

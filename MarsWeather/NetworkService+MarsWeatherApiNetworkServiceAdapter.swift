@@ -1,5 +1,5 @@
 //
-//  Temperature.swift
+//  NetworkService+MarsWeatherApiNetworkServiceAdapter.swift
 //  MarsWeather
 //
 //  Created by Martin Klöppner on 06/08/16.
@@ -8,9 +8,7 @@
 
 import Foundation
 
-public struct Temperature {
+extension NetworkingService : MarsWeatherApiNetworking {
     
-    var min : Double
-    var max : Double 
     
 }

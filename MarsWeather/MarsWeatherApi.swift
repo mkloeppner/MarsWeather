@@ -17,7 +17,11 @@ public class MarsWeatherApi {
     var modelTypeFactory : MarsWeatherFactory!
     
     public func fetchMarsWeather(success: (MarsWeather) -> Void) {
-        self.networking.get(NSURL(fileURLWithPath: baseURLPath + resourceURI), query: ["format" : "json"], success: { values in
+        self.networking.get(NSURL(string: baseURLPath + resourceURI)!, query: ["format" : "json"], success: { values in
+            guard let values = values as? Dictionary<String, AnyObject?> else {
+                return
+            }
+            
             if let weather = self.modelTypeFactory.create(values) {
                 success(weather)
             }

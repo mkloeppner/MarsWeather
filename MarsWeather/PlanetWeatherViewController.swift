@@ -10,7 +10,7 @@ import UIKit
 
 class PlanetWeatherViewController: UIViewController {
     
-    var planetWeather : PlanetWeather! {
+    var planetWeather : PlanetWeather? {
         didSet {
             self.updateChildViewController()
         }
@@ -35,7 +35,7 @@ class PlanetWeatherViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewDidAppear(animated: Bool) {
         self.planetWeatherFetcher.fetch(
             { planetWeather in self.planetWeather = planetWeather }
             , error: { error in })
@@ -49,7 +49,9 @@ class PlanetWeatherViewController: UIViewController {
     func updateChildViewController() {
         switch selectedDetailViewController {
         case let selectedDetailViewController as TemperatureViewController:
-            selectedDetailViewController.temperature = self.planetWeather.temperature
+            if let temperature = self.planetWeather?.temperature {
+                selectedDetailViewController.temperature = temperature
+            }
             
         default: break
         }
