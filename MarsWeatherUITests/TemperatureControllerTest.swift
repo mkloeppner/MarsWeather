@@ -21,16 +21,28 @@ class TemperatureControllerTest: XCTestCase {
         super.tearDown()
     }
     
-    func testIfTemperatureViewControllerUpdatesTemperatureLabelIfTemperatureIsSet() {
+    func testIfTemperatureViewControllerUpdatesMinTemperatureLabelIfMinTemperatureIsSet() {
         
         let expected = "10 °C";
         
         let tempController = TemperatureViewController()
-        tempController.temperatureLabel = MockUILabel()
+        tempController.minTemperatureLabel = MockUILabel()
         tempController.formattingService = MockFormattingService(returnValue: expected)
-        tempController.temperature = MockTemperature(min: 1.5, max: 2.0)
+        tempController.temperature = Temperature(min: 1.5, max: 2.0)
         
-        XCTAssertEqual(expected, tempController.temperatureLabel?.text)
+        XCTAssertEqual(expected, tempController.minTemperatureLabel?.text)
+    }
+    
+    func testIfMaxTemperatureViewControllerUpdatesMaxTemperatureLabelIfTemperatureIsSet() {
+        
+        let expected = "10 °C";
+        
+        let tempController = TemperatureViewController()
+        tempController.minTemperatureLabel = MockUILabel()
+        tempController.formattingService = MockFormattingService(returnValue: expected)
+        tempController.temperature = Temperature(min: 1.5, max: 2.0)
+        
+        XCTAssertEqual(expected, tempController.minTemperatureLabel?.text)
     }
     
 }

@@ -10,8 +10,10 @@ import Foundation
 
 extension MarsWeatherApi : PlanetWeatherFetcher {
     public func fetch(success: (PlanetWeather) -> Void, error: (Void) -> Void) {
-        self.fetchMarsWeather { marsWeather in
+        self.fetchMarsWeather({ marsWeather in
             success(marsWeather)
+        }) {
+            error()
         }
     }
 }

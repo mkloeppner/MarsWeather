@@ -16,7 +16,7 @@ public class NetworkingService {
         self.urlSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     }
     
-    public func get(url: NSURL, query: Dictionary<String, String>, success: (AnyObject) -> Void) {
+    public func get(url: NSURL, query: Dictionary<String, String>, success: (AnyObject) -> Void, error errorCb: (Void) -> Void) {
         var mutableURLPath = url.absoluteString
         for (key, value) in query {
             let index = query.indexForKey(key)
@@ -30,6 +30,16 @@ public class NetworkingService {
     
         let request = NSURLRequest(URL: NSURL(string: mutableURLPath)!)
         self.urlSession.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
+            guard response != nil else {
+                errorCb()
+                return
+            }
+            
+            guard response != nil && error == nil else {
+                errorCb()
+                return
+            }
+            
             do {
                 if let data = data {
                     let jsonData = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers)

@@ -21,7 +21,7 @@ public class MarsWeatherFactory {
             terrestrialDate: self.formattingService.date(from: report.valueForKey("terrestrial_date")! as! String),
             sol: report.valueForKey("sol") as! Int,
             ls: report.valueForKey("ls") as! Double,
-            minTemp: report.valueForKey("sol") as! Double,
+            minTemp: report.valueForKey("min_temp") as! Double,
             minTempFahrenheit: report.valueForKey("min_temp_fahrenheit") as! Double,
             maxTemp: report.valueForKey("max_temp") as! Double,
             maxTempFahrenheit: report.valueForKey("max_temp_fahrenheit") as! Double,

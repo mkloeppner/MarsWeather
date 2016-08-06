@@ -16,16 +16,20 @@ public class MarsWeatherApi {
     var networking : MarsWeatherApiNetworking!
     var modelTypeFactory : MarsWeatherFactory!
     
-    public func fetchMarsWeather(success: (MarsWeather) -> Void) {
+    public func fetchMarsWeather(success: (MarsWeather) -> Void, error: (Void) -> Void) {
         self.networking.get(NSURL(string: baseURLPath + resourceURI)!, query: ["format" : "json"], success: { values in
-            guard let values = values as? NSDictionary else {
-                return
-            }
+                guard let values = values as? NSDictionary else {
+                    return
+                }
             
-            if let weather = self.modelTypeFactory.create(values) {
-                success(weather)
+                if let weather = self.modelTypeFactory.create(values) {
+                    success(weather)
+                }
+            }, error:
+            {
+                error()
             }
-        })
+        )
     }
     
 }

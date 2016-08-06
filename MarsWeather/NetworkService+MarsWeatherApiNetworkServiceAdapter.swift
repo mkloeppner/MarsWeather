@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+ * The extensions decouple the MarsWeatherApi from the rest of this application such as the NetworkService.
+ *
+ * Due to this, MarsWeatherApi can be extracted and used in an other app, once that app provides a extension to make its network apis conforming to the MarsWeatherApiNetworking protocol.
+ */
 extension NetworkingService : MarsWeatherApiNetworking {
     
     

@@ -14,6 +14,6 @@ public protocol MarsWeatherApiNetworking {
      * @var url The service url 
      * @query HTTP Query Parameters
      */
-    func get(url: NSURL, query: Dictionary<String, String>, success: (AnyObject) -> Void)
+    func get(url: NSURL, query: Dictionary<String, String>, success: (AnyObject) -> Void, error: (Void) -> Void)
     
 }
