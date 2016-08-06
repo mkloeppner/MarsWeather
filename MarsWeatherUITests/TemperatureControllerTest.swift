@@ -28,7 +28,7 @@ class TemperatureControllerTest: XCTestCase {
         let tempController = TemperatureViewController()
         tempController.temperatureLabel = MockUILabel()
         tempController.formattingService = MockFormattingService(returnValue: expected)
-        tempController.temperature = MockTemperature(minimumTemperature: 1.5, maximumTemperature: 2.0)
+        tempController.temperature = MockTemperature(min: 1.5, max: 2.0)
         
         XCTAssertEqual(expected, tempController.temperatureLabel?.text)
     }

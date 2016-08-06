@@ -17,7 +17,7 @@ class TemperatureViewController: UIViewController {
     var temperature : Temperature! {
         didSet {
             if let temperatureLabel = temperatureLabel {
-                temperatureLabel.text = self.formattingService.string(fromTemperature: self.temperature.minimumTemperature)
+                temperatureLabel.text = self.formattingService.string(fromTemperature: self.temperature.min)
             }
         }
     }

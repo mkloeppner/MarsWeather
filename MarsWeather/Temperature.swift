@@ -10,8 +10,7 @@ import Foundation
 
 public protocol Temperature {
     
-    var minimumTemperature : Double { get }
-    
-    var maximumTemperature : Double { get }
+    var min : Double { get }
+    var max : Double { get }
     
 }

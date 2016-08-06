@@ -26,11 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         container.register(FormattingService.self) { _ in NumberFormatterFormattingServiceAdapter() }
         
-        container.register(PlanetWeather.self) { _ in MockPlanetWeather(temperature: MockTemperature(minimumTemperature: 1.0, maximumTemperature: 2.0)) }
+        container.register(PlanetWeather.self) { _ in MockPlanetWeather(temperature: MockTemperature(min: 1.0, max: 2.0)) }
         container.register(PlanetWeatherFetcher.self, factory: { _ in
             MockPlanetModelFetcher(planetWeather:
                 MockPlanetWeather(temperature:
-                    MockTemperature(minimumTemperature: 5.0, maximumTemperature: 10.0))) })
+                    MockTemperature(min: 5.0, max: 10.0))) })
         
         return container
     }()

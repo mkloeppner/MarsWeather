@@ -10,7 +10,7 @@ import Foundation
 
 public struct MockTemperature : Temperature {
     
-    public var minimumTemperature: Double
-    public var maximumTemperature: Double
+    public var min: Double
+    public var max: Double
     
 }
