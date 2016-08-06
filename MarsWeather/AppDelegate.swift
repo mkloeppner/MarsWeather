@@ -32,6 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 MockPlanetWeather(temperature:
                     MockTemperature(min: 5.0, max: 10.0))) })
         
+        container.register(MarsWeatherFactory.self) { r in
+            var marsWeatherFactory = MarsWeatherFactory()
+            marsWeatherFactory.formattingService = r.resolve(FormattingService.self)
+            return marsWeatherFactory
+        }
+        
         return container
     }()
 

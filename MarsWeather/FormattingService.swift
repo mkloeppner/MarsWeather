@@ -12,4 +12,6 @@ public protocol FormattingService {
     
     func string(fromTemperature double:Double) -> String;
     
+    func date(from value: String) -> NSDate?;
+    
 }

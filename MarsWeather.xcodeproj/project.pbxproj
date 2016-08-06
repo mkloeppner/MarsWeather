@@ -30,6 +30,10 @@
 		B5D983751D55E5F700D7BA69 /* TemperatureControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983731D55E5E000D7BA69 /* TemperatureControllerTest.swift */; };
 		B5D983781D55E7C100D7BA69 /* MockUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983771D55E7C100D7BA69 /* MockUILabel.swift */; };
 		B5D9837A1D55E84B00D7BA69 /* MockFormattingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983791D55E84B00D7BA69 /* MockFormattingService.swift */; };
+		B5D9837D1D55EA8C00D7BA69 /* MarsWeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9837C1D55EA8C00D7BA69 /* MarsWeatherApi.swift */; };
+		B5D9837F1D55EB1700D7BA69 /* MarsWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9837E1D55EB1700D7BA69 /* MarsWeather.swift */; };
+		B5D983811D55ED7800D7BA69 /* MarsWeatherFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983801D55ED7800D7BA69 /* MarsWeatherFactory.swift */; };
+		B5D983831D55EF4300D7BA69 /* MarsWeatherApiNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983821D55EF4300D7BA69 /* MarsWeatherApiNetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +104,10 @@
 		B5D983731D55E5E000D7BA69 /* TemperatureControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureControllerTest.swift; sourceTree = "<group>"; };
 		B5D983771D55E7C100D7BA69 /* MockUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUILabel.swift; sourceTree = "<group>"; };
 		B5D983791D55E84B00D7BA69 /* MockFormattingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFormattingService.swift; sourceTree = "<group>"; };
+		B5D9837C1D55EA8C00D7BA69 /* MarsWeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsWeatherApi.swift; sourceTree = "<group>"; };
+		B5D9837E1D55EB1700D7BA69 /* MarsWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsWeather.swift; sourceTree = "<group>"; };
+		B5D983801D55ED7800D7BA69 /* MarsWeatherFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsWeatherFactory.swift; sourceTree = "<group>"; };
+		B5D983821D55EF4300D7BA69 /* MarsWeatherApiNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsWeatherApiNetworking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,7 @@
 				B5D983211D55CF1500D7BA69 /* Main.storyboard */,
 				B5D983531D55D20C00D7BA69 /* PlanetWeather */,
 				B5D983551D55D3FA00D7BA69 /* Temperature */,
+				B5D9837B1D55EA5800D7BA69 /* MarsWeatherApi */,
 				B5D9835F1D55D68800D7BA69 /* Mock */,
 				B5D983681D55DC2500D7BA69 /* Common */,
 				B5D983241D55CF1500D7BA69 /* Assets.xcassets */,
@@ -306,6 +315,17 @@
 			name = Mocks;
 			sourceTree = "<group>";
 		};
+		B5D9837B1D55EA5800D7BA69 /* MarsWeatherApi */ = {
+			isa = PBXGroup;
+			children = (
+				B5D9837C1D55EA8C00D7BA69 /* MarsWeatherApi.swift */,
+				B5D9837E1D55EB1700D7BA69 /* MarsWeather.swift */,
+				B5D983801D55ED7800D7BA69 /* MarsWeatherFactory.swift */,
+				B5D983821D55EF4300D7BA69 /* MarsWeatherApiNetworking.swift */,
+			);
+			name = MarsWeatherApi;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -440,15 +460,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5D983201D55CF1500D7BA69 /* PlanetWeatherViewController.swift in Sources */,
+				B5D983831D55EF4300D7BA69 /* MarsWeatherApiNetworking.swift in Sources */,
 				B5D983711D55E30C00D7BA69 /* NumberFormatterFormattingServiceAdapter.swift in Sources */,
 				B5D9831E1D55CF1500D7BA69 /* AppDelegate.swift in Sources */,
 				B5D9836E1D55E2B200D7BA69 /* FormattingService.swift in Sources */,
 				B5D983671D55DB3B00D7BA69 /* PlanetWeatherFetcher.swift in Sources */,
 				B5D983641D55D6AE00D7BA69 /* MockPlanetWeather.swift in Sources */,
+				B5D9837F1D55EB1700D7BA69 /* MarsWeather.swift in Sources */,
 				B5D9835A1D55D55C00D7BA69 /* PlanetWeather.swift in Sources */,
 				B5D9835E1D55D5F100D7BA69 /* Temperature.swift in Sources */,
+				B5D9837D1D55EA8C00D7BA69 /* MarsWeatherApi.swift in Sources */,
 				B5D9836B1D55DC6800D7BA69 /* MockPlanetWeatherFetcher.swift in Sources */,
 				B5D983621D55D6A200D7BA69 /* MockTemperature.swift in Sources */,
+				B5D983811D55ED7800D7BA69 /* MarsWeatherFactory.swift in Sources */,
 				B5D983571D55D41500D7BA69 /* TemperatureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,6 +719,7 @@
 				B5D983441D55CF1500D7BA69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5D983451D55CF1500D7BA69 /* Build configuration list for PBXNativeTarget "MarsWeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -703,6 +728,7 @@
 				B5D983471D55CF1500D7BA69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5D983481D55CF1500D7BA69 /* Build configuration list for PBXNativeTarget "MarsWeatherUITests" */ = {
 			isa = XCConfigurationList;
@@ -711,6 +737,7 @@
 				B5D9834A1D55CF1500D7BA69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
