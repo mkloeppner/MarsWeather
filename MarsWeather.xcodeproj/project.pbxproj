@@ -14,6 +14,10 @@
 		B5D983281D55CF1500D7BA69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D983261D55CF1500D7BA69 /* LaunchScreen.storyboard */; };
 		B5D983331D55CF1500D7BA69 /* MarsWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983321D55CF1500D7BA69 /* MarsWeatherTests.swift */; };
 		B5D9833E1D55CF1500D7BA69 /* MarsWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9833D1D55CF1500D7BA69 /* MarsWeatherUITests.swift */; };
+		B5D9834C1D55D01600D7BA69 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D9834B1D55D01600D7BA69 /* Swinject.framework */; };
+		B5D9834D1D55D07B00D7BA69 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D9834B1D55D01600D7BA69 /* Swinject.framework */; };
+		B5D9834F1D55D10B00D7BA69 /* Swinject.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5D9834B1D55D01600D7BA69 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5D983511D55D16B00D7BA69 /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5D9834B1D55D01600D7BA69 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B5D9834E1D55D0F100D7BA69 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B5D9834F1D55D10B00D7BA69 /* Swinject.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D983521D55D16B00D7BA69 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B5D983511D55D16B00D7BA69 /* Swinject.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B5D9831A1D55CF1500D7BA69 /* MarsWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D9831D1D55CF1500D7BA69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +75,7 @@
 		B5D983391D55CF1500D7BA69 /* MarsWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D9833D1D55CF1500D7BA69 /* MarsWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsWeatherUITests.swift; sourceTree = "<group>"; };
 		B5D9833F1D55CF1500D7BA69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D9834B1D55D01600D7BA69 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = ../Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D9834C1D55D01600D7BA69 /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D9834D1D55D07B00D7BA69 /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +134,7 @@
 				B5D983241D55CF1500D7BA69 /* Assets.xcassets */,
 				B5D983261D55CF1500D7BA69 /* LaunchScreen.storyboard */,
 				B5D983291D55CF1500D7BA69 /* Info.plist */,
+				B5D9834B1D55D01600D7BA69 /* Swinject.framework */,
 			);
 			path = MarsWeather;
 			sourceTree = "<group>";
@@ -135,6 +167,7 @@
 				B5D983161D55CF1500D7BA69 /* Sources */,
 				B5D983171D55CF1500D7BA69 /* Frameworks */,
 				B5D983181D55CF1500D7BA69 /* Resources */,
+				B5D983521D55D16B00D7BA69 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +185,7 @@
 				B5D9832A1D55CF1500D7BA69 /* Sources */,
 				B5D9832B1D55CF1500D7BA69 /* Frameworks */,
 				B5D9832C1D55CF1500D7BA69 /* Resources */,
+				B5D9834E1D55D0F100D7BA69 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -401,6 +435,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MarsWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mkloeppner.MarsWeather;
@@ -412,6 +450,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MarsWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mkloeppner.MarsWeather;
@@ -423,6 +465,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MarsWeatherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mkloeppner.MarsWeatherTests;
@@ -435,6 +481,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MarsWeatherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mkloeppner.MarsWeatherTests;
