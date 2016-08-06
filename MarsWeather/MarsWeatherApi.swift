@@ -18,7 +18,7 @@ public class MarsWeatherApi {
     
     public func fetchMarsWeather(success: (MarsWeather) -> Void) {
         self.networking.get(NSURL(string: baseURLPath + resourceURI)!, query: ["format" : "json"], success: { values in
-            guard let values = values as? Dictionary<String, AnyObject?> else {
+            guard let values = values as? NSDictionary else {
                 return
             }
             

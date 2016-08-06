@@ -33,7 +33,9 @@ public class NetworkingService {
             do {
                 if let data = data {
                     let jsonData = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers)
-                    success(jsonData)
+                    NSOperationQueue.mainQueue().addOperationWithBlock({ 
+                        success(jsonData)  
+                    })
                 }
             } catch _ as NSError {
                 return
