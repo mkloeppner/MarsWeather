@@ -196,6 +196,13 @@
 			name = PlanetWeather;
 			sourceTree = "<group>";
 		};
+		B598FA051D5614EB009841C3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		B5D983111D55CF1500D7BA69 = {
 			isa = PBXGroup;
 			children = (
@@ -239,8 +246,9 @@
 			isa = PBXGroup;
 			children = (
 				B5D983761D55E7B300D7BA69 /* Mocks */,
-				B5D983321D55CF1500D7BA69 /* MarsWeatherTests.swift */,
 				B5D983721D55E5CB00D7BA69 /* TemperatureVieControllerTests */,
+				B598FA051D5614EB009841C3 /* Common */,
+				B5D983321D55CF1500D7BA69 /* MarsWeatherTests.swift */,
 				B5D983341D55CF1500D7BA69 /* Info.plist */,
 			);
 			path = MarsWeatherTests;
