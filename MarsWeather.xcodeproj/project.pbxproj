@@ -18,6 +18,7 @@
 		B5D9834D1D55D07B00D7BA69 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D9834B1D55D01600D7BA69 /* Swinject.framework */; };
 		B5D9834F1D55D10B00D7BA69 /* Swinject.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5D9834B1D55D01600D7BA69 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5D983511D55D16B00D7BA69 /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5D9834B1D55D01600D7BA69 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5D983571D55D41500D7BA69 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D983561D55D41500D7BA69 /* TemperatureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		B5D9833D1D55CF1500D7BA69 /* MarsWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsWeatherUITests.swift; sourceTree = "<group>"; };
 		B5D9833F1D55CF1500D7BA69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5D9834B1D55D01600D7BA69 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = ../Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		B5D983561D55D41500D7BA69 /* TemperatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				B5D9831D1D55CF1500D7BA69 /* AppDelegate.swift */,
 				B5D983211D55CF1500D7BA69 /* Main.storyboard */,
 				B5D983531D55D20C00D7BA69 /* PlanetWeather */,
+				B5D983551D55D3FA00D7BA69 /* Temperature */,
 				B5D983241D55CF1500D7BA69 /* Assets.xcassets */,
 				B5D983261D55CF1500D7BA69 /* LaunchScreen.storyboard */,
 				B5D983291D55CF1500D7BA69 /* Info.plist */,
@@ -171,6 +174,14 @@
 				B5D9831F1D55CF1500D7BA69 /* PlanetWeatherViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		B5D983551D55D3FA00D7BA69 /* Temperature */ = {
+			isa = PBXGroup;
+			children = (
+				B5D983561D55D41500D7BA69 /* TemperatureViewController.swift */,
+			);
+			name = Temperature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 			files = (
 				B5D983201D55CF1500D7BA69 /* PlanetWeatherViewController.swift in Sources */,
 				B5D9831E1D55CF1500D7BA69 /* AppDelegate.swift in Sources */,
+				B5D983571D55D41500D7BA69 /* TemperatureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
